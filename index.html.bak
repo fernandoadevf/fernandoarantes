@@ -282,12 +282,9 @@
                         <article
                             class="group relative w-full md:snap-center md:shrink-0 md:w-[520px] lg:w-[640px] aspect-[16/9] rounded-2xl overflow-hidden ring-1 bg-neutral-900/40"
                             data-index="0">
-                            <iframe
-                                src="https://player.vimeo.com/video/1080888311?muted=1&autoplay=1&loop=1&background=1&autopause=0&controls=0"
-                                class="absolute inset-0 h-full w-full object-cover" frameborder="0"
-                                allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
-                                style="pointer-events: none;">
-                            </iframe>
+                            <video autoplay loop muted playsinline class="absolute inset-0 h-full w-full object-cover">
+                                <source src="/videos/rv-camboriu-boulevard.mp4" type="video/mp4">
+                            </video>
                             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent">
                             </div>
                             <div class="absolute inset-x-0 bottom-0 p-5 md:p-6">
@@ -320,7 +317,7 @@
                             class="group relative w-full md:snap-center md:shrink-0 md:w-[520px] lg:w-[640px] aspect-[16/9] rounded-2xl overflow-hidden ring-1 bg-neutral-900/40"
                             data-index="1">
                             <video autoplay loop muted playsinline class="absolute inset-0 h-full w-full object-cover">
-                                <source src="/assets/a7x.mp4" type="video/mp4">
+                                <source src="/videos/a7x.mp4" type="video/mp4">
                             </video>
                             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent">
                             </div>
@@ -357,7 +354,7 @@
                             class="group relative w-full md:snap-center md:shrink-0 md:w-[520px] lg:w-[640px] aspect-[16/9] rounded-2xl overflow-hidden ring-1 bg-neutral-900/40"
                             data-index="2">
                             <video autoplay loop muted playsinline class="absolute inset-0 h-full w-full object-cover">
-                                <source src="/assets/video jhonas.mp4" type="video/mp4">
+                            <source src="/videos/video-jhonas.mp4" type="video/mp4">
                             </video>
                             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent">
                             </div>
@@ -389,7 +386,7 @@
                             class="group relative w-full md:snap-center md:shrink-0 md:w-[520px] lg:w-[640px] aspect-[16/9] rounded-2xl overflow-hidden ring-1 bg-neutral-900/40"
                             data-index="3">
                             <video autoplay loop muted playsinline class="absolute inset-0 h-full w-full object-cover">
-                                <source src="/assets/arca da presença.mp4" type="video/mp4">
+                                <source src="/videos/arca-da-presenca.mp4" type="video/mp4">
                             </video>
                             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent">
                             </div>
@@ -420,7 +417,7 @@
                             class="group relative w-full md:snap-center md:shrink-0 md:w-[520px] lg:w-[640px] aspect-[16/9] rounded-2xl overflow-hidden ring-1 bg-neutral-900/40"
                             data-index="4">
                             <video autoplay loop muted playsinline class="absolute inset-0 h-full w-full object-cover">
-                                <source src="/assets/formatura.mp4" type="video/mp4">
+                                <source src="/videos/formatura.mp4" type="video/mp4">
                             </video>
                             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent">
                             </div>
@@ -478,7 +475,7 @@
                         </div>
 
                         <video autoplay loop muted playsinline class="phone-content" id="phone-video-1">
-                            <source src="/assets/ORIGINAL_1 (1).mp4" type="video/mp4">
+                            <source src="/videos/motion-ref-fdr.mp4" type="video/mp4">
                         </video>
 
                         <div
@@ -497,7 +494,7 @@
                         </div>
 
                         <video autoplay loop muted playsinline class="phone-content" id="phone-video-2">
-                            <source src="/assets/MOTION_REF_FDR (1).mp4" type="video/mp4">
+                            <source src="/videos/motion-ref-fdr.mp4" type="video/mp4">
                         </video>
 
 
@@ -518,7 +515,7 @@
                         <!-- Option 1 -->
                         <button
                             class="showcase-option active group flex items-center gap-4 p-5 rounded-2xl bg-white/5 border-2 border-white/20 hover:border-white/40 hover:bg-white/10 hover:scale-105 transition-all duration-300 text-left cursor-pointer shadow-lg hover:shadow-xl"
-                            data-video-1="/assets/ORIGINAL_1 (1).mp4" data-video-2="/assets/MOTION_REF_FDR (1).mp4">
+                            data-video-1="/videos/craitivo-exousia-school.mp4" data-video-2="/videos/motion-ref-fdr.mp4">
                             <div
                                 class="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 group-[.active]:bg-blue-500 group-[.active]:text-white transition-colors">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -536,8 +533,8 @@
                         <!-- Option 2 -->
                         <button
                             class="showcase-option group flex items-center gap-4 p-5 rounded-2xl bg-white/5 border-2 border-white/20 hover:border-white/40 hover:bg-white/10 hover:scale-105 transition-all duration-300 text-left cursor-pointer shadow-lg hover:shadow-xl"
-                            data-video-1="/assets/framelab.mp4"
-                            data-video-2="/assets/RV_CAMBORIÚ BOULEVARD_VIDEO 2_VF.mp4">
+                            data-video-1="/videos/framelab.mp4"
+                            data-video-2="/videos/rv-camboriu-boulevard.mp4">
                             <div
                                 class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 group-[.active]:bg-purple-500 group-[.active]:text-white transition-colors">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -556,7 +553,7 @@
                         <!-- Option 3 -->
                         <button
                             class="showcase-option group flex items-center gap-4 p-5 rounded-2xl bg-white/5 border-2 border-white/20 hover:border-white/40 hover:bg-white/10 hover:scale-105 transition-all duration-300 text-left cursor-pointer shadow-lg hover:shadow-xl"
-                            data-video-1="/assets/ORIGINAL_1 (1).mp4" data-video-2="/assets/exousia.mp4">
+                            data-video-1="/videos/original-1.mp4" data-video-2="/videos/exousia.mp4">
                             <div
                                 class="w-12 h-12 rounded-full bg-orange-500/20 flex items-center justify-center text-orange-400 group-[.active]:bg-orange-500 group-[.active]:text-white transition-colors">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -607,7 +604,7 @@
                     data-category="commercial">
                     <video muted loop playsinline preload="metadata" class="w-full h-full object-cover"
                         onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-                        <source src="/assets/a7x.mp4" type="video/mp4">
+                        <source src="/videos/a7x.mp4" type="video/mp4">
                     </video>
                     <div class="portfolio-overlay pointer-events-none">
 
@@ -618,7 +615,7 @@
                     data-category="motion">
                     <video muted loop playsinline preload="metadata" class="w-full h-full object-cover"
                         onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-                        <source src="/assets/arca da presença.mp4" type="video/mp4">
+                        <source src="/videos/arca-da-presenca.mp4" type="video/mp4">
                     </video>
                     <div class="portfolio-overlay pointer-events-none">
 
@@ -629,7 +626,7 @@
                     data-category="event">
                     <video muted loop playsinline preload="metadata" class="w-full h-full object-cover"
                         onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-                        <source src="/assets/ORIGINAL2.mp4" type="video/mp4">
+                        <source src="/videos/original2.mp4" type="video/mp4">
                     </video>
                     <div class="portfolio-overlay pointer-events-none">
 
@@ -640,7 +637,7 @@
                     data-category="commercial">
                     <video muted loop playsinline preload="metadata" class="w-full h-full object-cover"
                         onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-                        <source src="/assets/CIES.mp4" type="video/mp4">
+                        <source src="/videos/cies.mp4" type="video/mp4">
                     </video>
                     <div class="portfolio-overlay pointer-events-none">
 
@@ -651,7 +648,7 @@
                     data-category="motion">
                     <video muted loop playsinline preload="metadata" class="w-full h-full object-cover"
                         onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-                        <source src="/assets/CRAITIVO_EXOUSIA SCHOOL.mp4" type="video/mp4">
+                        <source src="/videos/craitivo-exousia-school.mp4" type="video/mp4">
                     </video>
                     <div class="portfolio-overlay pointer-events-none">
 
@@ -662,7 +659,7 @@
                     data-category="event">
                     <video muted loop playsinline preload="metadata" class="w-full h-full object-cover"
                         onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-                        <source src="/assets/formatura.mp4" type="video/mp4">
+                        <source src="/videos/formatura.mp4" type="video/mp4">
                     </video>
                     <div class="portfolio-overlay pointer-events-none">
 

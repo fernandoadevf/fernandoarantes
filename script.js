@@ -236,6 +236,22 @@ const showcaseOptions = document.querySelectorAll('.showcase-option');
 const phoneVideo1 = document.getElementById('phone-video-1');
 const phoneVideo2 = document.getElementById('phone-video-2');
 
+function updatePhoneVideoSource(videoEl, src) {
+    if (!videoEl || !src) return;
+    if (videoEl.dataset.currentSrc === src) return;
+
+    videoEl.pause();
+    const sourceEl = videoEl.querySelector('source');
+    if (sourceEl) {
+        sourceEl.src = src;
+    } else {
+        videoEl.src = src;
+    }
+    videoEl.dataset.currentSrc = src;
+    videoEl.load();
+    videoEl.play().catch(() => { });
+}
+
 if (showcaseOptions.length > 0 && phoneVideo1 && phoneVideo2) {
     showcaseOptions.forEach(option => {
         option.addEventListener('click', () => {
@@ -257,21 +273,11 @@ if (showcaseOptions.length > 0 && phoneVideo1 && phoneVideo2) {
 
             // 2. Wait for collapse (700ms), then swap videos
             setTimeout(() => {
-                // Get video sources
-                const src1 = option.getAttribute('data-video-1');
-                const src2 = option.getAttribute('data-video-2');
+                const videoSrc1 = option.getAttribute('data-video-1');
+                const videoSrc2 = option.getAttribute('data-video-2');
 
-                // Swap sources
-                if (phoneVideo1.querySelector('source').src !== src1) {
-                    phoneVideo1.querySelector('source').src = src1;
-                    phoneVideo1.load();
-                    phoneVideo1.play();
-                }
-                if (phoneVideo2.querySelector('source').src !== src2) {
-                    phoneVideo2.querySelector('source').src = src2;
-                    phoneVideo2.load();
-                    phoneVideo2.play();
-                }
+                updatePhoneVideoSource(phoneVideo1, videoSrc1);
+                updatePhoneVideoSource(phoneVideo2, videoSrc2);
 
                 // 3. Expand Animation (Simulate "scroll separation")
                 // We simply trigger the scroll handler logic again to re-calculate 
@@ -289,6 +295,22 @@ if (showcaseOptions.length > 0 && phoneVideo1 && phoneVideo2) {
         });
     });
 }
+
+// Portfolio hover playback for native videos
+portfolioItems.forEach(item => {
+    const inlineVideo = item.querySelector('video');
+    if (!inlineVideo) return;
+
+    item.addEventListener('mouseenter', () => {
+        inlineVideo.currentTime = 0;
+        inlineVideo.play().catch(() => { });
+    });
+
+    item.addEventListener('mouseleave', () => {
+        inlineVideo.pause();
+        inlineVideo.currentTime = 0;
+    });
+});
 
 // Vertical Logo Carousel Logic - No Simultaneous Duplicates
 const logoPaths = [

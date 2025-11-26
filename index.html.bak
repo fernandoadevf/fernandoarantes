@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fernando Arantes — Videomaker & Motion Designer</title>
+    <meta name="description"
+        content="Videomaker e Motion Designer profissional especializado em visuais cinematográficos, produção comercial e motion graphics dinâmicos.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gfstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="antialiased text-white bg-black"
+    style="font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial">
+
+
+
+    <div class="gradient-blur">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="overflow-hidden relative">
+        <!-- Navigation -->
+        <header class="fixed z-20 bg-black/50 w-full top-0 backdrop-blur-xl"
+            style="animation: fadeSlideIn 0.5s ease-in-out 0.1s both">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="flex items-center justify-between py-6 border-b border-white/[0.06]">
+                    <a href="#" class="flex items-center gap-3">
+                        <span class="text-xl font-semibold tracking-tight">Fernando Arantes</span>
+                    </a>
+                    <button
+                        class="lg:hidden flex items-center justify-center w-10 h-10 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition ml-auto"
+                        id="mobile-menu-toggle" aria-label="Toggle menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-menu w-5 h-5">
+                            <line x1="4" x2="20" y1="12" y2="12"></line>
+                            <line x1="4" x2="20" y1="6" y2="6"></line>
+                            <line x1="4" x2="20" y1="18" y2="18"></line>
+                        </svg>
+                    </button>
+                    <nav class="hidden lg:flex items-center gap-8 text-sm text-white/70">
+                        <a href="#portfolio" class="hover:text-white transition">Portfólio</a>
+                        <a href="#about" class="hover:text-white transition">Sobre</a>
+                        <a href="#services" class="hover:text-white transition">Serviços</a>
+                        <a href="#process" class="hover:text-white transition">Processo</a>
+                        <a href="#contact" class="hover:text-white transition">Contato</a>
+                    </nav>
+                    <div class="flex items-center gap-3">
+                        <a href="#contact"
+                            class="group inline-flex min-w-[140px] cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:scale-105 border-gradient hover:text-white gap-2 text-sm font-medium text-white/80 tracking-tight bg-white/5 rounded-full pt-3 pr-5 pb-3 pl-5 relative backdrop-blur-xl gap-x-2 gap-y-2 items-center justify-center hidden md:inline-flex">
+                            Contrate-me
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" data-lucide="arrow-right"
+                                class="lucide lucide-arrow-right w-4 h-4">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <nav id="mobile-menu"
+                    class="lg:hidden hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border-b border-white/10 overflow-hidden"
+                    style="max-height: 0; transition: max-height 0.3s ease-in-out;">
+                    <div class="flex flex-col p-6 space-y-4">
+                        <a href="#portfolio"
+                            class="text-base text-white/70 hover:text-white transition py-2">Portfólio</a>
+                        <a href="#about" class="text-base text-white/70 hover:text-white transition py-2">Sobre</a>
+                        <a href="#services"
+                            class="text-base text-white/70 hover:text-white transition py-2">Serviços</a>
+                        <a href="#process" class="text-base text-white/70 hover:text-white transition py-2">Processo</a>
+                        <a href="#contact" class="text-base text-white/70 hover:text-white transition py-2">Contato</a>
+                        <a href="#contact"
+                            class="inline-flex items-center justify-center gap-2 border-gradient before:rounded-full text-sm font-medium text-white/80 bg-white/5 rounded-full px-5 py-3 mt-2">
+                            Contrate-me
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-arrow-right w-4 h-4">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- HERO -->
+        <section
+            class="min-h-screen flex flex-col section-visible text-center pt-0 pr-6 pb-24 pl-6 relative items-center justify-center xl:pt-0 xl:pb-0 z-10">
+            <div
+                class="inline-flex items-center gap-1 rounded-full bg-white/8 px-4 py-2 backdrop-blur-sm text-white/80 ring-1 ring-white/10 animate-badge">
+                <img src="/assets/imagem/logoass.png" alt="Assinatura" class="h-20 w-auto object-contain">
+            </div>
+
+            <h1 class="leading-[0.95] font-semibold text-white tracking-tight mt-0 mb-0 pt-24 pb-12"
+                style="animation: titleEmergence 1.8s ease-out both;">
+                <span class="block text-[10vw] sm:text-7xl lg:text-8xl flex items-center justify-center gap-4 sm:gap-6">
+                    <div class="w-[10vw] h-[10vw] sm:w-[70px] sm:h-[70px] lg:w-[90px] lg:h-[90px] rounded-full overflow-hidden border-2 border-white/20 shadow-2xl relative"
+                        style="animation: portraitFall 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) 0.8s both">
+                        <img src="/assets/imagem/foto 1.JPG" alt="Fernando Arantes"
+                            class="absolute inset-0 w-full h-full object-cover">
+                    </div>
+                    Criando
+                </span>
+                <span
+                    class="block text-[10vw] sm:text-7xl lg:text-8xl text-white/80 animate-shimmer-mask [--shine:220%]">
+                    histórias
+                </span>
+                <span class="block text-[10vw] sm:text-7xl lg:text-8xl">cinematográficas</span>
+            </h1>
+
+            <p class="max-w-3xl mx-auto text-lg md:text-xl text-white/80 type-words is-in" data-stagger=".2s"
+                data-duration="2s" data-ease="ease-in-out" data-delay=".4s">
+                <span class="w" style="--i:0">Especializado&nbsp;</span><span class="w"
+                    style="--i:1">em&nbsp;</span><span class="w" style="--i:2">produção&nbsp;</span><span class="w"
+                    style="--i:3">comercial,&nbsp;</span><span class="w" style="--i:4">motion&nbsp;</span><span
+                    class="w" style="--i:5">graphics,&nbsp;</span><span class="w" style="--i:6">e&nbsp;</span><span
+                    class="w" style="--i:7">storytelling&nbsp;</span><span class="w" style="--i:8">de&nbsp;</span><span
+                    class="w" style="--i:9">marca.&nbsp;</span><span class="w" style="--i:10">Dando&nbsp;</span><span
+                    class="w" style="--i:11">vida&nbsp;</span><span class="w" style="--i:12">às&nbsp;</span><span
+                    class="w" style="--i:13">visões&nbsp;</span><span class="w" style="--i:14">através&nbsp;</span><span
+                    class="w" style="--i:15">das&nbsp;</span><span class="w" style="--i:16">lentes.&nbsp;</span>
+            </p>
+
+            <div class="mt-10 flex items-center justify-center gap-4">
+                <a href="#portfolio"
+                    class="relative inline-flex items-center justify-center gap-2 overflow-hidden transition-all duration-300 hover:ring-sky-400/60 hover:shadow-[0_0_0_1px_rgba(56,189,248,0.35),0_40px_80px_rgba(56,189,248,0.18)] group ring-[#ffffff]/30 ring-1 text-base font-semibold text-white tracking-tight bg-neutral-950/95 rounded-full pt-3 pr-6 pb-3 pl-6 shadow-[0_0_0_1px_rgba(56,189,248,0.25),inset_0_0_0_1px_rgba(255,255,255,0.08)]"
+                    style="z-index:2;">
+                    <span class="z-[1] group-hover:translate-x-1 transition-transform duration-300 relative">Assistir
+                        Showreel</span>
+                    <span aria-hidden="true"
+                        class="pointer-events-none absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300"
+                        style="background: linear-gradient(45deg, rgba(56,189,248,0.8) 0%, rgba(99,102,241,0.8) 50%, rgba(168,85,247,0.8) 100%); animation: pulse 2s ease-in-out infinite;"></span>
+                </a>
+                <div class="inline-block group relative">
+                    <button
+                        class="group inline-flex min-w-[140px] cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:scale-105 border-gradient hover:text-white text-sm font-medium text-white/80 tracking-tight bg-white/5 rounded-full pt-3 pr-5 pb-3 pl-5 relative backdrop-blur-xl gap-x-2 gap-y-2 items-center justify-center">
+                        <span class="relative">Iniciar um projeto</span>
+                        <span aria-hidden="true"
+                            class="transition-all duration-300 group-hover:opacity-80 opacity-20 w-[70%] h-[1px] rounded-full absolute bottom-0 left-1/2 -translate-x-1/2"
+                            style="background:linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Vertical Logo Carousel -->
+    <div class="w-full bg-black/20 py-6">
+        <div class="mx-auto flex w-full max-w-screen-lg flex-col items-center">
+            <div class="text-center">
+                <h3
+                    class="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight pb-3 bg-clip-text text-transparent bg-gradient-to-t from-neutral-500 to-neutral-600">
+                    As melhores já estão aqui
+                </h3>
+            </div>
+
+            <div id="logo-carousel"
+                class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 h-auto md:h-64 overflow-hidden w-full mask-gradient">
+                <!-- Columns will be injected by JS -->
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .mask-gradient {
+            mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+            -webkit-mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+        }
+
+        @media (max-width: 767px) {
+            .mask-gradient {
+                mask-image: linear-gradient(to bottom, transparent, black 5%, black 95%, transparent);
+                -webkit-mask-image: linear-gradient(to bottom, transparent, black 5%, black 95%, transparent);
+            }
+        }
+
+        .logo-column {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 140px;
+            /* Increased from 100px */
+            height: 160px;
+            overflow: hidden;
+        }
+
+        @media (min-width: 768px) {
+            .logo-column {
+                width: 240px;
+                /* Increased from 180px */
+                height: 100%;
+                overflow: visible;
+            }
+        }
+
+        .logo-item {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 160px;
+            /* Increased from 120px */
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            opacity: 0;
+            transform: translateY(50%);
+            filter: blur(8px);
+        }
+
+        .logo-item.active {
+            opacity: 1;
+            transform: translateY(0);
+            filter: blur(0);
+        }
+
+        .logo-item.exit {
+            opacity: 0;
+            transform: translateY(-20%);
+            filter: blur(6px);
+        }
+
+        .logo-img {
+            max-width: 90%;
+            /* Increased from 80% */
+            max-height: 90%;
+            /* Increased from 80% */
+            object-fit: contain;
+        }
+    </style>
+
+    <!-- Carousel -->
+    <div class="relative mt-12 md:mt-16">
+        <section data-section="" class="xl:pt-24 pt-32 pb-32">
+            <div class="container max-w-7xl mr-auto ml-auto pr-6 pl-6 relative">
+                <div class="reveal">
+                    <div class="max-w-3xl animate-on-scroll" style="animation: fadeSlideIn 0.5s ease-in-out 0.1s both">
+                        <h2 class="md:text-6xl text-4xl font-semibold text-white tracking-tight mt-5 drop-shadow-xl">
+                            Produções em Destaque</h2>
+                        <p class="text-base md:text-lg text-white/70 mt-4">Uma coleção curada dos meus melhores
+                            trabalhos comerciais e criativos.</p>
+                    </div>
+                </div>
+                <div class="relative group/carousel">
+                    <!-- Navigation Buttons -->
+                    <button id="carousel-prev"
+                        class="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-black/50 border border-white/10 text-white/70 hover:text-white hover:bg-black/70 transition opacity-0 group-hover/carousel:opacity-100 disabled:opacity-0 disabled:cursor-not-allowed"
+                        aria-label="Previous slide">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-chevron-left w-6 h-6">
+                            <path d="m15 18-6-6 6-6" />
+                        </svg>
+                    </button>
+                    <button id="carousel-next"
+                        class="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-black/50 border border-white/10 text-white/70 hover:text-white hover:bg-black/70 transition opacity-0 group-hover/carousel:opacity-100 disabled:opacity-0 disabled:cursor-not-allowed"
+                        aria-label="Next slide">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-chevron-right w-6 h-6">
+                            <path d="m9 18 6-6-6-6" />
+                        </svg>
+                    </button>
+
+                    <div class="flex flex-col md:flex-row md:snap-x md:snap-mandatory md:overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] md:gap-8 md:scroll-px-8 md:pt-16 md:px-8 max-w-7xl pt-2 pr-8 pb-6 pl-8 gap-6"
+                        style="-webkit-overflow-scrolling: touch;" id="work-carousel">
+
+                        <!-- Card 1 -->
+                        <article
+                            class="group relative w-full md:snap-center md:shrink-0 md:w-[520px] lg:w-[640px] aspect-[16/9] rounded-2xl overflow-hidden ring-1 bg-neutral-900/40"
+                            data-index="0">
+                            <iframe
+                                src="https://player.vimeo.com/video/1080888311?muted=1&autoplay=1&loop=1&background=1&autopause=0&controls=0"
+                                class="absolute inset-0 h-full w-full object-cover" frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                                style="pointer-events: none;">
+                            </iframe>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent">
+                            </div>
+                            <div class="absolute inset-x-0 bottom-0 p-5 md:p-6">
+                                <div class="flex items-center gap-2 text-[11px] md:text-xs text-white/70">
+                                    <span
+                                        class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-lime-400/20 ring-1 ring-lime-300/30">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-clapperboard h-3.5 w-3.5 text-lime-300">
+                                            <path
+                                                d="M20.2 6 3 11l-.9-2.4c-.5-1.1.2-2.4 1.3-2.9L13.8 2c1.1-.5 2.4.2 2.9 1.3z" />
+                                            <path d="m6.2 5.3 3.1 3.9" />
+                                            <path d="m12.4 3.4 3.1 4" />
+                                            <path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z" />
+                                        </svg>
+                                    </span>
+                                    Youtube • Imóveis
+                                </div>
+                                <div class="mt-2.5 flex items-end justify-between gap-3">
+                                    <div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 2 -->
+                        <article
+                            class="group relative w-full md:snap-center md:shrink-0 md:w-[520px] lg:w-[640px] aspect-[16/9] rounded-2xl overflow-hidden ring-1 bg-neutral-900/40"
+                            data-index="1">
+                            <video autoplay loop muted playsinline class="absolute inset-0 h-full w-full object-cover">
+                                <source src="/assets/a7x.mp4" type="video/mp4">
+                            </video>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent">
+                            </div>
+                            <div class="absolute inset-x-0 bottom-0 p-5 md:p-6">
+                                <div class="flex items-center gap-2 text-[11px] md:text-xs text-white/70">
+                                    <span
+                                        class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-lime-400/20 ring-1 ring-lime-300/30">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-film h-3.5 w-3.5 text-lime-300">
+                                            <rect width="18" height="18" x="3" y="3" rx="2" />
+                                            <path d="M7 3v18" />
+                                            <path d="M3 7.5h4" />
+                                            <path d="M3 12h18" />
+                                            <path d="M3 16.5h4" />
+                                            <path d="M17 3v18" />
+                                            <path d="M17 7.5h4" />
+                                            <path d="M17 16.5h4" />
+                                        </svg>
+                                    </span>
+                                    Youtube • Imóveis
+                                </div>
+                                <div class="mt-2.5 flex items-end justify-between gap-3">
+                                    <div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 3 -->
+                        <article
+                            class="group relative w-full md:snap-center md:shrink-0 md:w-[520px] lg:w-[640px] aspect-[16/9] rounded-2xl overflow-hidden ring-1 bg-neutral-900/40"
+                            data-index="2">
+                            <video autoplay loop muted playsinline class="absolute inset-0 h-full w-full object-cover">
+                                <source src="/assets/video jhonas.mp4" type="video/mp4">
+                            </video>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent">
+                            </div>
+                            <div class="absolute inset-x-0 bottom-0 p-5 md:p-6">
+                                <div class="flex items-center gap-2 text-[11px] md:text-xs text-white/70">
+                                    <span
+                                        class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-lime-400/20 ring-1 ring-lime-300/30">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-music h-3.5 w-3.5 text-lime-300">
+                                            <path d="M9 18V5l12-2v13" />
+                                            <circle cx="6" cy="18" r="3" />
+                                            <circle cx="18" cy="16" r="3" />
+                                        </svg>
+                                    </span>
+                                    Videoclipe • Criativo
+                                </div>
+                                <div class="mt-2.5 flex items-end justify-between gap-3">
+                                    <div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 4 -->
+                        <article
+                            class="group relative w-full md:snap-center md:shrink-0 md:w-[520px] lg:w-[640px] aspect-[16/9] rounded-2xl overflow-hidden ring-1 bg-neutral-900/40"
+                            data-index="3">
+                            <video autoplay loop muted playsinline class="absolute inset-0 h-full w-full object-cover">
+                                <source src="/assets/arca da presença.mp4" type="video/mp4">
+                            </video>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent">
+                            </div>
+                            <div class="absolute inset-x-0 bottom-0 p-5 md:p-6">
+                                <div class="flex items-center gap-2 text-[11px] md:text-xs text-white/70">
+                                    <span
+                                        class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-orange-400/20 ring-1 ring-orange-300/30">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-flame h-3.5 w-3.5 text-orange-300">
+                                            <path
+                                                d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z" />
+                                        </svg>
+                                    </span>
+                                    Videoclipe • Criativo
+                                </div>
+                                <div class="mt-2.5 flex items-end justify-between gap-3">
+                                    <div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 5 -->
+                        <article
+                            class="group relative w-full md:snap-center md:shrink-0 md:w-[520px] lg:w-[640px] aspect-[16/9] rounded-2xl overflow-hidden ring-1 bg-neutral-900/40"
+                            data-index="4">
+                            <video autoplay loop muted playsinline class="absolute inset-0 h-full w-full object-cover">
+                                <source src="/assets/formatura.mp4" type="video/mp4">
+                            </video>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent">
+                            </div>
+                            <div class="absolute inset-x-0 bottom-0 p-5 md:p-6">
+                                <div class="flex items-center gap-2 text-[11px] md:text-xs text-white/70">
+                                    <span
+                                        class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-teal-400/20 ring-1 ring-teal-300/30">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-mountain h-3.5 w-3.5 text-teal-300">
+                                            <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
+                                        </svg>
+                                    </span>
+                                    Documentário • Comercial
+                                </div>
+                                <div class="mt-2.5 flex items-end justify-between gap-3">
+                                    <div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+
+    <!-- Mobile Showcase Section -->
+    <section class="z-10 py-24 relative overflow-hidden" id="mobile-showcase">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                <!-- Left: Phones Animation -->
+                <div class="relative h-[600px] w-full" id="phones-container">
+                    <!-- Phone 1 -->
+                    <div class="absolute top-0 left-[calc(50%-150px)] w-[300px] h-[600px] phone-mockup phone-left transition-transform duration-700 ease-out"
+                        style="z-index: 2;">
+                        <div class="phone-notch"></div>
+                        <div class="phone-ui-top">
+                            <span>9:41</span>
+                            <div class="flex gap-1">
+                                <svg width="14" height="10" viewBox="0 0 16 12" fill="currentColor">
+                                    <path d="M1 10h3V6H1v4zm4 0h3V4H5v6zm4 0h3V1H9v9zm4 0h3V8h-3v2z" />
+                                </svg>
+                                <svg width="18" height="10" viewBox="0 0 24 12" fill="currentColor">
+                                    <path
+                                        d="M16 0h-2l-4 4-4-4H4L0 4v8h24V4l-4-4zM2 10V5l4-4 4 4v5H2zm20 0h-8V5l4-4 4 4v5z" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <video autoplay loop muted playsinline class="phone-content" id="phone-video-1">
+                            <source src="/assets/ORIGINAL_1 (1).mp4" type="video/mp4">
+                        </video>
+
+                        <div
+                            class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60 z-10 pointer-events-none">
+                        </div>
+
+
+                    </div>
+
+                    <!-- Phone 2 -->
+                    <div class="absolute top-0 left-[calc(50%-150px)] w-[300px] h-[600px] phone-mockup phone-right transition-transform duration-700 ease-out"
+                        style="z-index: 1;">
+                        <div class="phone-notch"></div>
+                        <div class="phone-ui-top">
+                            <span>9:42</span>
+                        </div>
+
+                        <video autoplay loop muted playsinline class="phone-content" id="phone-video-2">
+                            <source src="/assets/MOTION_REF_FDR (1).mp4" type="video/mp4">
+                        </video>
+
+
+                    </div>
+                </div>
+
+                <!-- Right: Content & Options -->
+                <div class="flex flex-col gap-8 animate-on-scroll"
+                    style="animation: fadeSlideIn 0.5s ease-in-out 0.1s both">
+                    <div>
+                        <h2 class="text-3xl md:text-5xl font-semibold text-white mb-4">Estratégia Vertical</h2>
+                        <p class="text-white/60 text-lg">Impacto Máximo no Formato Mobile. Produza vídeos curtos de alta
+                            performance. Entregamos a formatação ideal para capturar a atenção imediata e gerar
+                            resultados em qualquer feed. Selecione o seu foco:</p>
+                    </div>
+
+                    <div class="flex flex-col gap-4">
+                        <!-- Option 1 -->
+                        <button
+                            class="showcase-option active group flex items-center gap-4 p-5 rounded-2xl bg-white/5 border-2 border-white/20 hover:border-white/40 hover:bg-white/10 hover:scale-105 transition-all duration-300 text-left cursor-pointer shadow-lg hover:shadow-xl"
+                            data-video-1="/assets/ORIGINAL_1 (1).mp4" data-video-2="/assets/MOTION_REF_FDR (1).mp4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 group-[.active]:bg-blue-500 group-[.active]:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-zap">
+                                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-semibold text-lg">Motion Design</h3>
+                                <p class="text-white/50 text-sm"></p>
+                            </div>
+                        </button>
+
+                        <!-- Option 2 -->
+                        <button
+                            class="showcase-option group flex items-center gap-4 p-5 rounded-2xl bg-white/5 border-2 border-white/20 hover:border-white/40 hover:bg-white/10 hover:scale-105 transition-all duration-300 text-left cursor-pointer shadow-lg hover:shadow-xl"
+                            data-video-1="/assets/framelab.mp4"
+                            data-video-2="/assets/RV_CAMBORIÚ BOULEVARD_VIDEO 2_VF.mp4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 group-[.active]:bg-purple-500 group-[.active]:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-briefcase">
+                                    <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-semibold text-lg">Real Estate</h3>
+                                <p class="text-white/50 text-sm"></p>
+                            </div>
+                        </button>
+
+                        <!-- Option 3 -->
+                        <button
+                            class="showcase-option group flex items-center gap-4 p-5 rounded-2xl bg-white/5 border-2 border-white/20 hover:border-white/40 hover:bg-white/10 hover:scale-105 transition-all duration-300 text-left cursor-pointer shadow-lg hover:shadow-xl"
+                            data-video-1="/assets/ORIGINAL_1 (1).mp4" data-video-2="/assets/exousia.mp4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-orange-500/20 flex items-center justify-center text-orange-400 group-[.active]:bg-orange-500 group-[.active]:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-plane">
+                                    <path d="M2 12h10" />
+                                    <path d="M9 4v16" />
+                                    <path d="m3 9 3 3-3 3" />
+                                    <path d="M12 6 19.5 3 22 6 19.5 9 12 6 Z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-semibold text-lg">Ads Production</h3>
+                                <p class="text-white/50 text-sm"></p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Portfolio Section -->
+    <section class="z-10 xl:py-24 mt-24 pt-12 pb-12 relative" id="portfolio">
+        <div class="container lg:px-8 max-w-7xl mr-auto ml-auto pr-6 pl-6">
+            <div class="max-w-3xl animate-on-scroll" style="animation: fadeSlideIn 0.5s ease-in-out 0.1s both">
+                <div
+                    class="inline-flex gap-2 border-gradient before:rounded-full bg-white/5 rounded-full pt-1.5 pr-3 pb-1.5 pl-3 backdrop-blur gap-x-2 gap-y-2 items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-play-circle w-3.5 h-3.5 text-white-400">
+                        <circle cx="12" cy="12" r="10" />
+                        <polygon points="10 8 16 12 10 16 10 8" />
+                    </svg>
+                    <span class="text-xs text-white/70">Trabalhos Selecionados</span>
+                </div>
+                <h2 class="md:text-6xl text-4xl font-semibold text-white tracking-tight mt-5 drop-shadow-xl">Últimos
+                    Projetos</h2>
+            </div>
+
+
+
+            <!-- Portfolio Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10" id="portfolio-grid">
+                <!-- Item 1 -->
+                <div class="portfolio-item rounded-2xl overflow-hidden border border-white/10 bg-white/5 animate-on-scroll aspect-video"
+                    data-category="commercial">
+                    <video muted loop playsinline preload="metadata" class="w-full h-full object-cover"
+                        onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
+                        <source src="/assets/a7x.mp4" type="video/mp4">
+                    </video>
+                    <div class="portfolio-overlay pointer-events-none">
+
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="portfolio-item rounded-2xl overflow-hidden border border-white/10 bg-white/5 animate-on-scroll aspect-video"
+                    data-category="motion">
+                    <video muted loop playsinline preload="metadata" class="w-full h-full object-cover"
+                        onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
+                        <source src="/assets/arca da presença.mp4" type="video/mp4">
+                    </video>
+                    <div class="portfolio-overlay pointer-events-none">
+
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="portfolio-item rounded-2xl overflow-hidden border border-white/10 bg-white/5 animate-on-scroll aspect-video"
+                    data-category="event">
+                    <video muted loop playsinline preload="metadata" class="w-full h-full object-cover"
+                        onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
+                        <source src="/assets/ORIGINAL2.mp4" type="video/mp4">
+                    </video>
+                    <div class="portfolio-overlay pointer-events-none">
+
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="portfolio-item rounded-2xl overflow-hidden border border-white/10 bg-white/5 animate-on-scroll aspect-video"
+                    data-category="commercial">
+                    <video muted loop playsinline preload="metadata" class="w-full h-full object-cover"
+                        onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
+                        <source src="/assets/CIES.mp4" type="video/mp4">
+                    </video>
+                    <div class="portfolio-overlay pointer-events-none">
+
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="portfolio-item rounded-2xl overflow-hidden border border-white/10 bg-white/5 animate-on-scroll aspect-video"
+                    data-category="motion">
+                    <video muted loop playsinline preload="metadata" class="w-full h-full object-cover"
+                        onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
+                        <source src="/assets/CRAITIVO_EXOUSIA SCHOOL.mp4" type="video/mp4">
+                    </video>
+                    <div class="portfolio-overlay pointer-events-none">
+
+                    </div>
+                </div>
+                <!-- Item 6 -->
+                <div class="portfolio-item rounded-2xl overflow-hidden border border-white/10 bg-white/5 animate-on-scroll aspect-video"
+                    data-category="event">
+                    <video muted loop playsinline preload="metadata" class="w-full h-full object-cover"
+                        onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
+                        <source src="/assets/formatura.mp4" type="video/mp4">
+                    </video>
+                    <div class="portfolio-overlay pointer-events-none">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="z-10 xl:py-24 mt-24 pt-12 pb-12 relative" id="about">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid gap-16 lg:grid-cols-2 items-center">
+                <!-- Left: Image/Video -->
+                <div class="relative overflow-hidden rounded-2xl aspect-[4/5]">
+                    <img src="assets/imagem/fernando11.png" alt="Fernando Arantes"
+                        class="absolute inset-0 w-full h-full object-cover object-top opacity-90">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                </div>
+
+                <!-- Right: Content -->
+                <div>
+                    <div
+                        class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 backdrop-blur mb-6">
+                        <span class="text-xs text-white/70 uppercase tracking-wider">Sobre Mim</span>
+                    </div>
+                    <h2
+                        class="text-4xl md:text-5xl lg:text-6xl text-white font-semibold tracking-tight leading-tight mb-6">
+                        Criando histórias visuais através das lentes
+                    </h2>
+                    <p class="text-lg text-white/60 mb-6 leading-relaxed">
+                        Sou Fernando Arantes, Videomaker e Motion Designer profissional com 6 anos de experiência.
+                        Minha especialidade é transformar ideias em narrativas visuais cinematográficas, ajudando marcas
+                        e indivíduos a comunicar suas mensagens com clareza e impacto estratégico.
+
+
+                    <p class="text-lg text-white/60 mb-8 leading-relaxed">
+                        Desde o planejamento de pré-produção até a edição final, dedico-me a expandir os
+                        limites do storytelling. Seja para um comercial, um videoclipe ou uma peça complexa
+                        de motion graphics, minha paixão é garantir que sua história seja vista, sentida e lembrada.
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                        <div
+                            class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition group">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-sky-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-award w-6 h-6 text-sky-400">
+                                    <circle cx="12" cy="8" r="7" />
+                                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-1">6+ Anos</h3>
+                            <p class="text-sm text-white/50">Experiência profissional em produção de vídeo e motion
+                                design</p>
+                        </div>
+                        <div
+                            class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition group">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-sky-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-trophy w-6 h-6 text-sky-400">
+                                    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+                                    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+                                    <path d="M4 22h16" />
+                                    <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
+                                    <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
+                                    <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-1">Portfólio Diversificado</h3>
+                            <p class="text-sm text-white/50">Projetos realizados em múltiplos segmentos, com expertise
+                                para se adaptar a
+                                diferentes desafios visuais.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="z-10 xl:py-24 mt-24 pt-12 pb-12 relative" id="services">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="max-w-3xl animate-on-scroll" style="animation: fadeSlideIn 0.5s ease-in-out 0.1s both">
+                <h2 class="text-4xl md:text-6xl text-white mt-5 drop-shadow-xl font-semibold tracking-tight">Serviços
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+                <div class="bg-white/5 rounded-2xl p-6 border border-white/10">
+                    <h3 class="text-xl font-semibold mb-2">Produção de Vídeo</h3>
+                    <p class="text-white/60 text-sm">Comerciais, vídeos corporativos, eventos e videoclipes filmados em
+                        4K.</p>
+                </div>
+                <div class="bg-white/5 rounded-2xl p-6 border border-white/10">
+                    <h3 class="text-xl font-semibold mb-2">Motion Graphics</h3>
+                    <p class="text-white/60 text-sm">Animação 2D/3D, revelação de logo e tipografia cinética.</p>
+                </div>
+                <div class="bg-white/5 rounded-2xl p-6 border border-white/10">
+                    <h3 class="text-xl font-semibold mb-2">Edição e Cor</h3>
+                    <p class="text-white/60 text-sm">Corte profissional, storytelling e color grading.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="z-10 xl:pt-32 xl:pb-32 mt-24 pt-32 pb-32 relative" id="contact">
+        <div class="lg:px-8 max-w-4xl mr-auto ml-auto pr-6 pl-6 text-center">
+            <h2 class="text-3xl md:text-5xl text-white mb-4 font-semibold">Pronto para filmar?</h2>
+            <p class="text-white/70 mb-8">Vamos criar algo incrível juntos.</p>
+            <a href="mailto:contact@fernandoarantes.com"
+                class="inline-flex items-center gap-2 bg-white text-black rounded-full px-8 py-4 font-bold hover:scale-105 transition">
+                Entre em Contato
+            </a>
+        </div>
+    </section>
+
+    <footer class="z-10 relative border-t border-white/10 mt-20 py-12 text-center text-white/50 text-sm">
+        <p>&copy; 2025 Fernando Arantes. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Shader Animation Background for About Section with Parallax
+        function initShaderBackground() {
+            const aboutSection = document.getElementById('about');
+            if (!aboutSection || typeof THREE === 'undefined') return;
+
+            // Create container for shader
+            const shaderContainer = document.createElement('div');
+            shaderContainer.id = 'shader-background';
+            shaderContainer.style.cssText = `
+                position: absolute;
+                top: -20%;
+                left: 0;
+                width: 100%;
+                height: 140%;
+                z-index: 0;
+                overflow: hidden;
+                opacity: 0.4;
+                mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+                -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+            `;
+
+            aboutSection.style.position = 'relative';
+            aboutSection.style.overflow = 'hidden';
+            aboutSection.insertBefore(shaderContainer, aboutSection.firstChild);
+
+            // Add gradient overlays to fade shader to black at top and bottom
+            const topGradient = document.createElement('div');
+            topGradient.style.cssText = `
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 200px;
+                z-index: 1;
+                background: linear-gradient(to bottom, #000000 0%, transparent 100%);
+                pointer-events: none;
+            `;
+            aboutSection.insertBefore(topGradient, aboutSection.children[1]);
+
+            const bottomGradient = document.createElement('div');
+            bottomGradient.style.cssText = `
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 200px;
+                z-index: 1;
+                background: linear-gradient(to top, #000000 0%, transparent 100%);
+                pointer-events: none;
+            `;
+            aboutSection.appendChild(bottomGradient);
+
+            // Make sure content is above shader and gradients
+            const contentElements = aboutSection.querySelectorAll(':scope > *:not(#shader-background)');
+            contentElements.forEach(el => {
+                if (!el.style.background || !el.style.background.includes('gradient')) {
+                    el.style.position = 'relative';
+                    el.style.zIndex = '2';
+                }
+            });
+
+            // Vertex shader
+            const vertexShader = `
+                void main() {
+                    gl_Position = vec4( position, 1.0 );
+                }
+            `;
+
+            // Fragment shader
+            const fragmentShader = `
+                #define TWO_PI 6.2831853072
+                #define PI 3.14159265359
+
+                precision highp float;
+                uniform vec2 resolution;
+                uniform float time;
+
+                void main(void) {
+                    vec2 uv = (gl_FragCoord.xy * 2.0 - resolution.xy) / min(resolution.x, resolution.y);
+                    float t = time*0.05;
+                    float lineWidth = 0.002;
+
+                    vec3 color = vec3(0.0);
+                    for(int j = 0; j < 3; j++){
+                        for(int i=0; i < 5; i++){
+                            color[j] += lineWidth*float(i*i) / abs(fract(t - 0.01*float(j)+float(i)*0.01)*5.0 - length(uv) + mod(uv.x+uv.y, 0.2));
+                        }
+                    }
+                    
+                    gl_FragColor = vec4(color[0],color[1],color[2],1.0);
+                }
+            `;
+
+            // Initialize Three.js scene
+            const camera = new THREE.Camera();
+            camera.position.z = 1;
+
+            const scene = new THREE.Scene();
+            const geometry = new THREE.PlaneGeometry(2, 2);
+
+            const uniforms = {
+                time: { type: "f", value: 1.0 },
+                resolution: { type: "v2", value: new THREE.Vector2() },
+            };
+
+            const material = new THREE.ShaderMaterial({
+                uniforms: uniforms,
+                vertexShader: vertexShader,
+                fragmentShader: fragmentShader,
+            });
+
+            const mesh = new THREE.Mesh(geometry, material);
+            scene.add(mesh);
+
+            const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+            renderer.setPixelRatio(window.devicePixelRatio);
+            renderer.setClearColor(0x000000, 0);
+
+            shaderContainer.appendChild(renderer.domElement);
+
+            // Handle window resize
+            const onWindowResize = () => {
+                const width = shaderContainer.clientWidth;
+                const height = shaderContainer.clientHeight;
+                renderer.setSize(width, height);
+                uniforms.resolution.value.x = renderer.domElement.width;
+                uniforms.resolution.value.y = renderer.domElement.height;
+            };
+
+            // Initial resize
+            onWindowResize();
+            window.addEventListener("resize", onWindowResize, false);
+
+            // Parallax effect on scroll
+            const handleScroll = () => {
+                const rect = aboutSection.getBoundingClientRect();
+                const viewportHeight = window.innerHeight;
+
+                // Calculate parallax offset based on section position
+                if (rect.top < viewportHeight && rect.bottom > 0) {
+                    const scrollProgress = (viewportHeight - rect.top) / (viewportHeight + rect.height);
+                    const parallaxOffset = scrollProgress * 100 - 50; // Range from -50 to 50
+                    shaderContainer.style.transform = `translateY(${parallaxOffset}px) scale(1.1)`;
+                }
+            };
+
+            window.addEventListener('scroll', handleScroll, { passive: true });
+            handleScroll(); // Initial call
+
+            // Animation loop
+            let animationId;
+            const animate = () => {
+                animationId = requestAnimationFrame(animate);
+                uniforms.time.value += 0.05;
+                renderer.render(scene, camera);
+            };
+
+            // Start animation
+            animate();
+        }
+
+        // Initialize when DOM and Three.js are ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initShaderBackground);
+        } else {
+            initShaderBackground();
+        }
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

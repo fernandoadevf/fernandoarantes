@@ -1,3 +1,16 @@
+// Throttle function for performance optimization
+function throttle(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
 // Carousel Logic
 history.scrollRestoration = 'manual';
 const scroller = document.getElementById('work-carousel');
@@ -192,17 +205,9 @@ const phoneLeft = document.querySelector('.phone-left');
 const phoneRight = document.querySelector('.phone-right');
 
 if (phonesContainer && phoneLeft && phoneRight) {
-    window.addEventListener('scroll', () => {
+    const handlePhoneScroll = () => {
         const rect = phonesContainer.getBoundingClientRect();
         const viewportHeight = window.innerHeight;
-
-        // Logic:
-        // Start: Section enters viewport (bottom of screen) -> Phones are overlapped
-        // End: Section is fully visible/centered -> Phones are separated
-
-        // Calculate progress
-        // When rect.top == viewportHeight, progress = 0
-        // When rect.top == viewportHeight * 0.2 (near top), progress = 1
 
         const start = viewportHeight * 0.9;
         const end = viewportHeight * 0.2;
@@ -210,25 +215,20 @@ if (phonesContainer && phoneLeft && phoneRight) {
         let progress = (start - rect.top) / (start - end);
         progress = Math.min(Math.max(progress, 0), 1);
 
-        // Animation
-        const maxSpread = 170; // px
-
-        // Current values
-        // Ease out slightly for better feel? No, user wanted "dynamic" direct control.
-        // Linear mapping is most direct.
-
+        const maxSpread = 170;
         const spread = maxSpread * progress;
 
-        // Apply
         if (window.innerWidth >= 768) {
             phoneLeft.style.transform = `translateX(-${spread}px)`;
             phoneRight.style.transform = `translateX(${spread}px)`;
         } else {
-            // Mobile vertical stack
             phoneLeft.style.transform = 'none';
             phoneRight.style.transform = 'none';
         }
-    });
+    };
+
+    // Apply throttle to reduce CPU usage
+    window.addEventListener('scroll', throttle(handlePhoneScroll, 16), { passive: true });
 }
 // Mobile Showcase Interaction
 // Mobile Showcase Interaction
@@ -296,18 +296,38 @@ if (showcaseOptions.length > 0 && phoneVideo1 && phoneVideo2) {
     });
 }
 
-// Portfolio hover playback for native videos
+// Portfolio click-to-play with play button
 portfolioItems.forEach(item => {
     const inlineVideo = item.querySelector('video');
-    if (!inlineVideo) return;
+    const playButton = item.querySelector('.play-button');
 
-    item.addEventListener('mouseenter', () => {
+    if (!inlineVideo || !playButton) return;
+
+    // Load first visible frame (not black frame)
+    inlineVideo.addEventListener('loadedmetadata', () => {
+        // Seek to 0.5 seconds to avoid black frames at start
+        inlineVideo.currentTime = 0.5;
+    });
+
+    // Click on play button to start video
+    playButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        item.classList.add('playing');
         inlineVideo.currentTime = 0;
         inlineVideo.play().catch(() => { });
     });
 
-    item.addEventListener('mouseleave', () => {
-        inlineVideo.pause();
+    // Click on video to pause
+    inlineVideo.addEventListener('click', () => {
+        if (!inlineVideo.paused) {
+            inlineVideo.pause();
+            item.classList.remove('playing');
+        }
+    });
+
+    // Reset when video ends
+    inlineVideo.addEventListener('ended', () => {
+        item.classList.remove('playing');
         inlineVideo.currentTime = 0;
     });
 });
@@ -517,7 +537,8 @@ if (mobileCarousel && mobilePagination) {
         });
     };
 
-    mobileCarousel.addEventListener('scroll', () => requestAnimationFrame(updatePagination), { passive: true });
+    // Apply throttle to reduce CPU usage
+    mobileCarousel.addEventListener('scroll', throttle(updatePagination, 16), { passive: true });
     // Initial update
     updatePagination();
 }
